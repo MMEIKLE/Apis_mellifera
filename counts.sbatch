@@ -4,13 +4,15 @@
 #SBATCH --mail-user=<USER_EMAIL>
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
-#SBATCH --mem=6gb
-#SBATCH --time=04:00:00
+#SBATCH --mem=1gb
+#SBATCH --time=24:00:00
 #SBATCH --output=Read_counts%j.log
 
 cd /blue/mcb4934/share/makenzie.meikle/FinalProject
 
 #Convert sam to bam and sort!
+#This is roughly a ~6hr process per sample if using full read counts. 
+#For practice with this pipeline it may be wise to sample ~1-2M reads from the sam files before conversion to bam
 
 module load samtools
 
