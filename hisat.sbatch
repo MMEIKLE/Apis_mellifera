@@ -13,7 +13,7 @@ cd /blue/mcb4934/share/makenzie.meikle/FinalProject
 #Building hisat index
 module load hisat2
 
-hisat2-build -f ncbi_dataset/data/GCF_003254395.2/GCF_003254395.2_Amel_HAv3.1_genomic.fna A_mellifera_RefSeq
+hisat2-build -f ncbi_dataset/data/GCA_003254395.2/GCF_003254395.2_Amel_HAv3.1_genomic.fna A_mellifera_RefSeq
 
 #Alignment to reference
 hisat2 -p 8 -x A_mellifera_RefSeq -1 SRR21972968_1_paired_trimmed.fastq.gz -2 SRR21972968_2_paired_trimmed.fastq.gz -S Amel_68.sam
